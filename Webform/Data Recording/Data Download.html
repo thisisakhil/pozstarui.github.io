@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:svg="http://www.w3.org/2000/svg">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="NobleUI">
+	<meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<title>Data Download - Data Recording</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- End fonts -->
+
+	<!-- core:css -->
+	<link rel="stylesheet" href="../../assets/vendors/core/core.css">
+	<!-- endinject -->
+
+	<!-- Plugin css for this page -->
+	<!-- End plugin css for this page -->
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="../../assets/fonts/feather-font/css/iconfont.css">
+	<link rel="stylesheet" href="../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+	<!-- endinject -->
+
+	<!-- Layout styles -->
+	<!--link rel="stylesheet" href="../../../assets/css/demo1/style.css"-->
+	<link rel="stylesheet" href="../../assets/css/demo1/style.css">
+	<!-- End layout styles -->
+
+	<link rel="shortcut icon" href="https://www.pozstar.com/wp-content/uploads/2021/10/poz.png" />
+	<style>
+		.table_60 {
+			width: 60%;
+		}
+
+		@media screen and (max-width: 1400px) {
+			.table_60 {
+				width: 100%;
+			}
+		}
+
+		td {
+			/*border: 1px solid #000;
+			*/
+		}
+
+		tr td:first-child {
+			width: 1%;
+			white-space: nowrap;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<!-- partial:../../partials/_sidebar.html -->
+		<nav class="sidebar">
+			<div class="sidebar-header">
+				<a href="#" class="sidebar-brand"><img src="../../assets/images/logo.svg" alt=""></a>
+				<div class="sidebar-toggler not-active">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class="sidebar-body">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
+							<i class="link-icon" data-feather="feather"></i>
+							<span class="link-title">Status</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="uiComponents">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Status/Position & Activity.html" class="nav-link">Position & Activity</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Status/Google Map.html" class="nav-link">Google Map</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
+							<i class="link-icon" data-feather="anchor"></i>
+							<span class="link-title">Satelites</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="advancedUI">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Satellites/Tracking Table.html" class="nav-link">Tracking Table</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Satellites/Tracking Info Table.html" class="nav-link">Tracking Info Table</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Satellites/Tracking Skylot.html" class="nav-link">Tracking Skylot</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Satellites/Satelite Activation.html" class="nav-link">Satelite Activation</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms">
+							<i class="link-icon" data-feather="inbox"></i>
+							<span class="link-title">Receiver Configuration</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="forms">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Receiver Configuration/Receiver Info.html" class="nav-link">Receiver Info</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Receiver Configuration/Antenna Configuration.html" class="nav-link">Antenna Configuration</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Receiver Configuration/Reference Station Settings.html" class="nav-link">Reference Station Settings</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Receiver Configuration/Receiver Reset.html" class="nav-link">Receiver Reset</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Receiver Configuration/Language.html" class="nav-link">Language</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Receiver Configuration/User Management.html" class="nav-link">User Management</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Receiver Configuration/HCPPP Settings.html" class="nav-link">HCPPP Settings</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#charts" role="button" aria-expanded="false" aria-controls="charts">
+							<i class="link-icon" data-feather="pie-chart"></i>
+							<span class="link-title">Data Recording</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse show" id="charts">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Data Recording/Log Settings.html" class="nav-link">Log Settings</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Data Recording/FTP Push Settings.html" class="nav-link">FTP Push Settings</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Data Recording/FTP Push Log.html" class="nav-link">FTP Push Log</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Data Recording/Data Download.html" class="nav-link active">Data Download</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
+							<i class="link-icon" data-feather="layout"></i>
+							<span class="link-title">I/O Settings</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="tables">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../IO Settings/Server Settings.html" class="nav-link">Server Settings</a>
+								</li>
+								<!--li class="nav-item">
+									<a href="../IO Settings/Radio Settings.html" class="nav-link">Radio Settings</a>
+								</li-->
+								<!--li class="nav-item">
+									<a href="../IO Settings/Bluetooth Settings.html" class="nav-link">Bluetooth Settings</a>
+								</li-->
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#network" role="button" aria-expanded="false" aria-controls="network">
+							<i class="link-icon" data-feather="smile"></i>
+							<span class="link-title">Network Settings</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="network">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Network Setting/Email Alarm.html" class="nav-link">Email Alarm</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Network Setting/HTTP.html" class="nav-link">HTTP</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Network Setting/HTTPS.html" class="nav-link">HTTPS</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Network Setting/FTP Service.html" class="nav-link">FTP Service</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#module" role="button" aria-expanded="false" aria-controls="module">
+							<i class="link-icon" data-feather="smile"></i>
+							<span class="link-title">Module Settings</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="module">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Module Setting/Module Info.html" class="nav-link">Module Info</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Module Setting/Wifi.html" class="nav-link">Wifi</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Module Setting/Bluetooth Settings.html" class="nav-link">Bluetooth Settings</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Module Setting/Radio Settings.html" class="nav-link">Radio Settings</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="collapse" href="#firmware" role="button" aria-expanded="false" aria-controls="firmware">
+							<i class="link-icon" data-feather="smile"></i>
+							<span class="link-title">Firmware</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="firmware">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../Firmware/Device Info.html" class="nav-link">Device Info</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="../Firmware/Config File.html" class="nav-link">Config File</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Firmware/System Log.html" class="nav-link">System Log</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Firmware/User Log.html" class="nav-link">User Log</a>
+								</li>
+								<li class="nav-item">
+									<a href="../Firmware/Device Upgrade.html" class="nav-link">Device Upgrade</a>
+								</li>
+
+
+								<li class="nav-item">
+									<a href="../Firmware/GNSS Registration.html" class="nav-link">GNSS Registration</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- partial -->
+
+		<div class="page-wrapper">
+
+			<!-- partial:../../partials/_navbar.html -->
+			<nav class="navbar">
+				<a href="#" class="sidebar-toggler">
+					<i data-feather="menu"></i>
+				</a>
+				<div class="navbar-content">
+					<form class="search-form">
+						<div class="input-group">
+							<div class="input-group-text">
+								<i data-feather="search"></i>
+							</div>
+							<input type="text" class="form-control" id="navbarForm" placeholder="Search here...">
+						</div>
+					</form>
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="flag-icon flag-icon-us mt-1" title="us"></i> <span class="ms-1 me-1 d-none d-md-inline-block">English</span>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="languageDropdown">
+								<a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> <span class="ms-1"> English </span></a>
+								<a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i> <span class="ms-1"> French </span></a>
+								<a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de" title="de" id="de"></i> <span class="ms-1"> German </span></a>
+								<a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt" title="pt" id="pt"></i> <span class="ms-1"> Portuguese </span></a>
+								<a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-es" title="es" id="es"></i> <span class="ms-1"> Spanish </span></a>
+							</div>
+						</li>
+						<li>
+						<li class="nav-item dropdown" style="min-width: 120px;"><span class="ms-1 me-1 d-none d-md-inline-block">Serial No: 123456</span></li>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img class="wd-30 ht-30 rounded-circle" style="width: 50px;height: auto;" src="../../assets/images/P3.png" alt="profile">
+							</a>
+							<div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+								<div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+									<div class="mb-3">
+										<img class="wd-80 ht-80 rounded-circle" style="width: 100px;height: auto;" src="../../assets/images/P3.png" alt="">
+									</div>
+									<div class="text-center">
+										<p class="tx-16 fw-bolder">PozStar P4</p>
+										<p class="tx-12 text-muted">Some info about P4</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- partial -->
+
+			<div class="page-content">
+
+				<nav class="page-breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Data Recording</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Data Download</li>
+					</ol>
+				</nav>
+				<div class="row">
+					<div class="col-md-12 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title" style="font-size: 1.125rem;">Data Download</h6>
+								<!-- <p class="text-muted mb-3">Add class <code>.table-bordered</code></p> -->
+								<a href="../../Records/" target="_blank">Click to open a folder</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- partial:../../partials/_footer.html -->
+			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+				<p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.pozstar.com" target="_blank"><b>Made by PozStar Co., Ltd</b></a>.</p>
+			</footer>
+			<!-- partial -->
+
+		</div>
+	</div>
+
+	<!-- core:js -->
+	<script src="../../assets/vendors/core/core.js"></script>
+	<!-- endinject -->
+
+	<!-- Plugin js for this page -->
+	<!-- End plugin js for this page -->
+
+	<!-- inject:js -->
+	<script src="../../assets/vendors/feather-icons/feather.min.js"></script>
+	<script src="../../assets/js/template.js"></script>
+	<!-- endinject -->
+
+	<!-- Custom js for this page -->
+	<!-- End custom js for this page -->
+
+</body>
+
+</html>
